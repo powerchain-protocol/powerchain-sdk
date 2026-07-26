@@ -1,5 +1,3 @@
-# PowerChain Web3.js
-
 <div align="center">
 
 <picture>
