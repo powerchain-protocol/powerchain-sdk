@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/logo-green.png" alt="PowerChain" width="120" />
+<img src="./assets/logo/logo-green.png" alt="PowerChain" width="120" />
 
 # @powerchain/web3.js
 
@@ -36,7 +36,7 @@ Built using a modern layered architecture, PowerChain Web3.js supports **Node.js
 PowerChain Web3.js is organised into a layered architecture that cleanly separates application frameworks, SDK modules, middleware, transport protocols and blockchain infrastructure. This modular design enables excellent maintainability, extensibility and long-term compatibility across every supported runtime.
 
 <p align="center">
-  <img src="../assets/architecture/architecture.png" alt="PowerChain Web3.js Architecture" width="1100" />
+  <img src="./assets/architecture/architecture.png" alt="PowerChain Web3.js Architecture" width="1100" />
 </p>
 
 <p align="center">
