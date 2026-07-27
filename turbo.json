@@ -1,0 +1,141 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "globalDependencies": [
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "tsconfig.base.json",
+    "turbo.json",
+    ".env",
+    ".env.local"
+  ],
+  "globalEnv": [
+    "NODE_ENV",
+    "CI",
+    "TURBO_TEAM",
+    "TURBO_TOKEN",
+    "NEXT_PUBLIC_SUPABASE_URL",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+    "SUPABASE_SERVICE_ROLE_KEY",
+    "OPENAI_API_KEY",
+    "ANTHROPIC_API_KEY",
+    "GITHUB_TOKEN"
+  ],
+  "tasks": {
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*"
+      ],
+      "outputs": [
+        "dist/**",
+        ".next/**",
+        "build/**",
+        "lib/**",
+        "target/**",
+        "!target/debug/**"
+      ]
+    },
+
+    "clean": {
+      "cache": false
+    },
+
+    "lint": {
+      "dependsOn": [
+        "^lint"
+      ],
+      "outputs": []
+    },
+
+    "format": {
+      "cache": false
+    },
+
+    "check": {
+      "dependsOn": [
+        "^check"
+      ],
+      "outputs": []
+    },
+
+    "typecheck": {
+      "dependsOn": [
+        "^typecheck"
+      ],
+      "outputs": []
+    },
+
+    "test": {
+      "dependsOn": [
+        "build"
+      ],
+      "outputs": [
+        "coverage/**"
+      ]
+    },
+
+    "test:watch": {
+      "cache": false,
+      "persistent": true
+    },
+
+    "coverage": {
+      "dependsOn": [
+        "test"
+      ],
+      "outputs": [
+        "coverage/**"
+      ]
+    },
+
+    "docs": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        ".next/**"
+      ]
+    },
+
+    "storybook": {
+      "cache": false,
+      "persistent": true
+    },
+
+    "bench": {
+      "dependsOn": [
+        "build"
+      ],
+      "outputs": [
+        "benchmarks/**"
+      ]
+    },
+
+    "release": {
+      "dependsOn": [
+        "build",
+        "test",
+        "lint",
+        "typecheck"
+      ],
+      "cache": false
+    },
+
+    "publish": {
+      "dependsOn": [
+        "release"
+      ],
+      "cache": false
+    }
+  }
+}

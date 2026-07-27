@@ -4,9 +4,9 @@
 
 # @powerchain/web3.js
 
-### The official JavaScript & TypeScript SDK for the PowerChain Network.
+### Official JavaScript & TypeScript SDK for the PowerChain Network
 
-Build wallets, decentralized applications, digital payments, tokenized assets, enterprise financial infrastructure, renewable energy marketplaces, and AI-powered blockchain services with a modern, modular SDK.
+Build enterprise-grade blockchain applications, digital payments, treasury systems, AI-native financial infrastructure, renewable energy marketplaces and digital asset platforms.
 
 [![Version](https://img.shields.io/badge/version-v1.0.0--beta-blue)](#)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green)](#)
@@ -338,27 +338,6 @@ PowerChain follows enterprise software engineering and cloud security best pract
 - Data Protection
 
 ---
-### Application Architecture
-```
-Applications
-      │
-      ▼
-PowerChain Web3.js
-      │
-────────────────────────────────────
- Wallet
- Transactions
- Contracts
- Payments
- Events
- Crypto
- Providers
-────────────────────────────────────
-      │
-HTTP • JSON-RPC • GraphQL • WebSocket
-      │
-PowerChain Network
-````
 
 # Example Applications
 
@@ -436,7 +415,7 @@ pnpm typecheck
 
 ## Upcoming
 
-- Beta v1.1
+- Stable v1.0
 - Local Emulator
 - Developer Sandbox
 - Mobile SDKs
