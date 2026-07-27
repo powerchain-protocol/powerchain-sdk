@@ -23,13 +23,17 @@ Build enterprise-grade blockchain applications, digital payments, treasury syste
 
 ---
 
-# Enterprise AI-Native Financial Infrastructure
+# Enterprise AI-Native Renewable Energy & Financial Infrastructure
 
-PowerChain Web3.js is the official JavaScript and TypeScript SDK for building production-ready applications on the PowerChain Network.
+PowerChain Web3.js is the official JavaScript and TypeScript SDK for the **PowerChain Network**, providing a comprehensive development platform for building secure, scalable and production-ready applications across digital finance, renewable energy and enterprise infrastructure.
 
-Designed for developers, enterprises, utilities, financial institutions and ecosystem partners, the SDK provides a modern, modular and strongly typed interface for blockchain infrastructure, payments, treasury management, renewable energy markets, AI services and digital assets.
+Designed for developers, enterprises, utilities, financial institutions, governments and ecosystem partners, the SDK delivers a modular, strongly typed and extensible API for interacting with the PowerChain ecosystem. It unifies blockchain infrastructure, digital assets, programmable payments, treasury management, tokenised renewable energy, carbon markets, AI-native automation and enterprise services through a consistent developer experience.
 
-The SDK is built around a stable client architecture, supports multiple runtimes and follows modern software engineering practices including Semantic Versioning, OpenTelemetry, OpenAPI, automated testing and supply-chain security.
+Built with a modern, layered architecture, PowerChain Web3.js supports multiple JavaScript runtimes—including Node.js, browsers, serverless platforms and edge environments—while maintaining a stable, backwards-compatible public API. Every component is engineered for reliability, performance and long-term maintainability, enabling applications to scale from prototypes to enterprise deployments.
+
+The SDK embraces modern software engineering and cloud-native best practices, including TypeScript-first development, Semantic Versioning (SemVer), OpenAPI, JSON-RPC, GraphQL, OpenTelemetry, automated testing, continuous integration, software supply-chain security, signed package provenance and comprehensive developer documentation. Its modular package architecture, tree-shakeable ES Modules and enterprise-grade tooling help teams build faster while maintaining security, observability and operational excellence.
+
+Whether you are developing digital payment platforms, treasury systems, renewable energy marketplaces, carbon credit exchanges, tokenised asset platforms, AI-powered financial services or enterprise blockchain applications, PowerChain Web3.js provides the foundational SDK for building on the PowerChain Network with confidence.
 
 ---
 
