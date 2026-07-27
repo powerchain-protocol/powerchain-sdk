@@ -1,6 +1,6 @@
 # Governancen (DAO)
 
- Governance Framework for **@powerchain/web3.js**
+> Governance Framework for **@powerchain/web3.js**
 
 **Version:** `v1.0.0-beta`
 
