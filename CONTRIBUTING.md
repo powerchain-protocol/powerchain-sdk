@@ -1,11 +1,5 @@
 # Contributing to PowerChain Web3.js
 
-<div align="center">
-
-# Thank You ❤️
-
-Thank you for contributing to **PowerChain Web3.js**.
-
 PowerChain is an open-source platform for enterprise AI-native financial infrastructure, digital assets, renewable energy, payments and blockchain applications.
 
 Every contribution—code, documentation, testing, design, security research or community support—helps improve the PowerChain ecosystem.
@@ -628,3 +622,9 @@ Official JavaScript & TypeScript SDK
 Enterprise AI-Native Financial Infrastructure
 
 </div>
+
+<div align="center">
+
+# Thank You ❤️
+
+Thank you for contributing to **PowerChain Web3.js**.
