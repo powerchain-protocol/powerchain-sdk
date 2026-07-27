@@ -1,6 +1,5 @@
-Here is the content converted into clean README-compatible Markdown:
-
 # Architecture
+
 > Enterprise Architecture for **@powerchain/web3.js**
 **Version:** `v1.0.0-beta`
 PowerChain Web3.js is designed as a modular, enterprise-grade JavaScript and TypeScript SDK that provides a stable, extensible and strongly typed interface for interacting with the PowerChain Network.
