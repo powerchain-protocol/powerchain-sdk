@@ -1,83 +1,178 @@
 # Contributing to PowerChain Web3.js
 
-First, thank you for your interest in contributing to the PowerChain Network.
+<div align="center">
 
-PowerChain is an open-source project focused on building enterprise AI-native financial infrastructure. We welcome contributions from developers, security researchers, technical writers, designers and community members.
+# Thank You ❤️
 
-Before contributing, please read this document together with:
+Thank you for contributing to **PowerChain Web3.js**.
 
-- CODE_OF_CONDUCT.md
-- SECURITY.md
-- GOVERNANCE.md
-- ARCHITECTURE.md
-- README.md
+PowerChain is an open-source platform for enterprise AI-native financial infrastructure, digital assets, renewable energy, payments and blockchain applications.
+
+Every contribution—code, documentation, testing, design, security research or community support—helps improve the PowerChain ecosystem.
+
+</div>
 
 ---
 
 # Table of Contents
 
+- Welcome
 - Code of Conduct
+- Project Values
 - Ways to Contribute
-- Getting Started
+- Engineering Principles
+- Repository Overview
 - Development Environment
-- Repository Structure
-- Branch Strategy
-- Development Workflow
+- Local Development
+- Architecture
 - Coding Standards
-- Testing
-- Documentation
-- Commit Guidelines
+- API Design Guidelines
+- Documentation Standards
+- Testing Requirements
+- Performance Requirements
+- Security Guidelines
+- Accessibility
+- Git Workflow
+- Commit Conventions
 - Pull Requests
+- Code Review
 - Release Process
-- Security
-- Reporting Bugs
-- Feature Requests
-- Discussions
+- Issue Reporting
+- RFC Process
 - Community
+- Recognition
 - License
+
+---
+
+# Welcome
+
+PowerChain Web3.js is developed as a long-term enterprise SDK.
+
+Our goals are:
+
+- Stable APIs
+- Excellent developer experience
+- Security by default
+- High performance
+- Strong documentation
+- Enterprise reliability
+- Long-term maintainability
+
+Every contribution should improve one or more of these goals.
 
 ---
 
 # Code of Conduct
 
-This project follows the PowerChain Code of Conduct.
-
-By participating, you agree to foster a welcoming, respectful and inclusive community.
+All contributors are expected to follow the project's Code of Conduct.
 
 Please read:
 
-CODE_OF_CONDUCT.md
+- CODE_OF_CONDUCT.md
+
+Respectful, constructive and inclusive collaboration is expected at all times.
+
+---
+
+# Project Values
+
+We value:
+
+- Simplicity
+- Reliability
+- Security
+- Transparency
+- Performance
+- Accessibility
+- Maintainability
+- Backwards Compatibility
+- Documentation
+- Community
 
 ---
 
 # Ways to Contribute
 
-We welcome contributions including:
+We welcome contributions in many forms.
 
-- Bug fixes
-- New SDK features
-- Performance improvements
-- Documentation
-- Examples
+## Development
+
+- SDK Features
+- Wallet Support
+- Programs
+- Payments
+- Treasury
+- Exchange
+- Marketplace
+- AI Platform
+- Renewable Energy
+- CLI
+- Tooling
+
+## Documentation
+
 - Tutorials
-- API improvements
-- Testing
-- Security improvements
-- Developer tooling
-- CI/CD improvements
-- Infrastructure
-- Internationalisation
-- Accessibility
+- Examples
+- API Reference
+- Architecture
+- Diagrams
+- Migration Guides
+
+## Testing
+
+- Unit Tests
+- Integration Tests
+- Performance Tests
+- Security Tests
+- Browser Compatibility
+- Runtime Compatibility
+
+## Community
+
+- Discussions
+- Bug Reports
+- Feature Requests
+- Translations
+- Conference Talks
+- Educational Content
 
 ---
 
-# Development Requirements
+# Repository Overview
 
-Minimum requirements:
+```
+apps/
+packages/
+programs/
+contracts/
+registry/
+schemas/
+specifications/
+runtime/
+platform/
+examples/
+templates/
+docs/
+tests/
+benchmarks/
+tools/
+scripts/
+```
+
+Every directory has a clearly defined responsibility.
+
+Avoid introducing duplicate functionality.
+
+---
+
+# Development Environment
+
+## Requirements
 
 | Tool | Version |
 |------|---------|
-| Node.js | 20 LTS or newer |
+| Node.js | 20 LTS+ |
 | pnpm | 10+ |
 | TypeScript | 5.x |
 | Git | Latest |
@@ -85,7 +180,9 @@ Minimum requirements:
 
 ---
 
-# Clone the Repository
+# Getting Started
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/powerchain/web3.js.git
@@ -93,57 +190,43 @@ git clone https://github.com/powerchain/web3.js.git
 cd web3.js
 ```
 
----
-
-# Install Dependencies
+Install dependencies:
 
 ```bash
 pnpm install
 ```
 
----
-
-# Build
-
-```bash
-pnpm build
-```
-
----
-
-# Development
+Run development mode:
 
 ```bash
 pnpm dev
 ```
 
----
+Build:
 
-# Run Tests
+```bash
+pnpm build
+```
+
+Run tests:
 
 ```bash
 pnpm test
 ```
 
----
-
-# Type Check
-
-```bash
-pnpm typecheck
-```
-
----
-
-# Lint
+Lint:
 
 ```bash
 pnpm lint
 ```
 
----
+Type check:
 
-# Format
+```bash
+pnpm typecheck
+```
+
+Format:
 
 ```bash
 pnpm format
@@ -151,140 +234,111 @@ pnpm format
 
 ---
 
-# Repository Structure
+# Engineering Principles
 
-```
-apps/
-packages/
-contracts/
-programs/
-registry/
-docs/
-examples/
-templates/
-tests/
-benchmarks/
-tools/
-scripts/
-```
+Every change should strive to improve:
 
----
+- Readability
+- Simplicity
+- Reliability
+- Performance
+- Testability
+- Documentation
+- Compatibility
 
-# Branch Strategy
-
-Use short, descriptive branch names.
-
-Examples
-
-```
-feature/wallet-standard
-
-feature/payment-links
-
-feature/exchange-routing
-
-fix/transaction-builder
-
-fix/token2022
-
-docs/api-reference
-
-refactor/client-runtime
-
-perf/cache
-
-test/websocket
-```
-
----
-
-# Development Workflow
-
-1. Fork the repository.
-
-2. Create a feature branch.
-
-3. Write code.
-
-4. Add or update tests.
-
-5. Update documentation.
-
-6. Run all checks.
-
-7. Submit a Pull Request.
+Prefer small focused changes over large unrelated pull requests.
 
 ---
 
 # Coding Standards
 
-PowerChain follows modern TypeScript best practices.
+PowerChain follows strict TypeScript practices.
 
 ## Requirements
 
-- TypeScript Strict Mode
+- Strict Mode enabled
 - ES Modules
+- Named exports
 - Strong typing
 - No `any` in public APIs
-- Tree-shakeable exports
-- Small focused modules
-- Backwards compatibility where practical
+- No dead code
+- Tree-shakeable modules
+- Async/await preferred
+- Immutable data where practical
 
 ---
 
-# Style Guide
+# API Design Guidelines
 
-- Prefer immutable data
-- Use async/await
-- Avoid callback APIs
-- Write self-documenting code
-- Prefer composition over inheritance
-- Avoid breaking public APIs
-- Keep functions focused and testable
+Public APIs should be:
+
+- Predictable
+- Consistent
+- Discoverable
+- Well documented
+- Stable
+- Backwards compatible
+
+Example:
+
+```ts
+client.wallet.create()
+
+client.payments.create()
+
+client.exchange.quote()
+
+client.treasury.accounts.list()
+```
+
+Avoid inconsistent naming.
 
 ---
 
-# Public API Guidelines
-
-Public APIs should:
-
-- be stable
-- be documented
-- include examples
-- include TypeScript definitions
-- include tests
-- avoid breaking changes during beta unless necessary
-
----
-
-# Documentation
+# Documentation Standards
 
 Every feature should include documentation.
 
-Update when appropriate:
+Update when applicable:
 
 - README.md
-- SDK Guide
 - API Reference
-- Examples
+- SDK Guide
 - Tutorials
+- Examples
 - Migration Guides
+- Changelog
 
-Documentation should be clear, concise and include working examples.
+Documentation should contain:
+
+- Overview
+- Configuration
+- Example
+- Expected Output
+- Error Handling
+- Best Practices
 
 ---
 
-# Testing
+# Testing Requirements
 
-Every contribution should include appropriate tests.
+All new functionality requires appropriate tests.
 
-## Test Types
+## Required
 
 - Unit Tests
+
+## Recommended
+
 - Integration Tests
 - End-to-End Tests
 - Compatibility Tests
+
+## Optional
+
 - Performance Tests
+- Stress Tests
+- Fuzz Tests
 
 Run:
 
@@ -292,64 +346,112 @@ Run:
 pnpm test
 ```
 
-Coverage should not decrease without justification.
-
 ---
 
-# Performance
+# Performance Requirements
 
-When introducing new functionality, consider:
+Please consider:
 
-- Bundle size
-- Startup time
-- Memory usage
-- Network requests
+- Bundle Size
+- Cold Start
+- Startup Time
+- Memory Usage
+- Network Requests
 - Latency
-- Tree shaking
-- Browser compatibility
+- Tree Shaking
+
+Avoid unnecessary dependencies.
 
 ---
 
-# Security
+# Security Guidelines
 
-Security is a shared responsibility.
+Security is everyone's responsibility.
 
 Please:
 
-- never commit secrets
-- validate user input
-- use parameterised queries
-- minimise dependencies
-- avoid introducing vulnerable packages
+- Never commit secrets
+- Validate input
+- Sanitize output
+- Follow least-privilege principles
+- Minimize dependencies
+- Review third-party packages
 
-For vulnerabilities:
+PowerChain uses:
 
-See SECURITY.md
+- CodeQL
+- Dependency Review
+- Secret Scanning
+- SBOM Generation
+- Package Provenance
+- Signed Releases
 
-Do not open public GitHub issues for security reports.
+For security issues:
+
+Do **not** create a public issue.
+
+Please follow **SECURITY.md**.
 
 ---
 
-# Commit Messages
+# Accessibility
 
-PowerChain uses Conventional Commits.
+Documentation and examples should be:
+
+- Clear
+- Inclusive
+- Keyboard friendly
+- Screen reader friendly
+- Colour-independent where applicable
+
+---
+
+# Git Workflow
+
+1. Fork
+2. Create feature branch
+3. Commit changes
+4. Push branch
+5. Open Pull Request
+
+Example:
+
+```text
+feature/payment-links
+
+feature/token2022
+
+fix/exchange-routing
+
+docs/getting-started
+
+perf/cache-layer
+
+test/program-client
+```
+
+---
+
+# Commit Convention
+
+PowerChain follows **Conventional Commits**.
 
 Examples:
 
-```
-feat(wallet): add wallet recovery
+```text
+feat(wallet): support passkeys
 
-feat(exchange): support route simulation
+feat(payments): add payment links
 
-fix(payments): correct invoice status
+fix(exchange): improve quote accuracy
 
-docs(api): improve authentication guide
+docs(api): update authentication guide
 
-perf(client): reduce bundle size
+perf(runtime): optimise middleware
 
-test(wallet): add transaction tests
+refactor(client): simplify transport layer
 
-refactor(runtime): simplify middleware
+test(wallet): improve coverage
 
 chore(ci): update GitHub Actions
 ```
@@ -360,20 +462,78 @@ chore(ci): update GitHub Actions
 
 Before submitting:
 
-- Code builds successfully
-- Tests pass
-- Lint passes
-- Formatting passes
-- Documentation updated
-- Changelog updated if applicable
+- ✅ Builds successfully
+- ✅ Tests pass
+- ✅ Lint passes
+- ✅ Formatting applied
+- ✅ Documentation updated
+- ✅ Public API reviewed
+- ✅ Changelog updated (if applicable)
 
-Provide:
+Please include:
 
-- summary
-- motivation
-- screenshots (if UI)
-- test plan
-- breaking changes (if any)
+- Summary
+- Motivation
+- Screenshots (if UI)
+- Test Plan
+- Breaking Changes
+- Related Issues
+
+---
+
+# Code Review
+
+Reviews focus on:
+
+- Correctness
+- Readability
+- API Design
+- Security
+- Performance
+- Documentation
+- Test Coverage
+- Long-term Maintainability
+
+Large architectural changes may require an RFC before implementation.
+
+---
+
+# Release Process
+
+PowerChain follows:
+
+- Semantic Versioning
+- Conventional Commits
+- Keep a Changelog
+- Changesets
+- Automated GitHub Releases
+- Signed Git Tags
+
+Current release:
+
+**v1.0.0-beta**
+
+Release progression:
+
+```
+Alpha
+
+↓
+
+Beta
+
+↓
+
+Release Candidate
+
+↓
+
+Stable
+
+↓
+
+Long-Term Support
+```
 
 ---
 
@@ -381,119 +541,90 @@ Provide:
 
 Please include:
 
-- SDK version
-- Node.js version
-- Operating system
+- SDK Version
 - Runtime
+- Operating System
+- Node.js Version
 - Browser (if applicable)
-- Reproduction steps
-- Expected behaviour
-- Actual behaviour
+- Steps to Reproduce
+- Expected Behaviour
+- Actual Behaviour
 - Logs
+
+Minimal reproducible examples are appreciated.
 
 ---
 
 # Feature Requests
 
-Feature requests should explain:
+Good feature requests describe:
 
-- problem
-- proposed solution
-- alternatives considered
-- use cases
-
-Large proposals may require an RFC.
+- The problem
+- Proposed solution
+- Alternatives considered
+- Expected benefits
+- Example use cases
 
 ---
 
 # RFC Process
 
-Major architectural changes should begin with an RFC.
+Major changes should begin with an RFC.
 
-Examples:
+Examples include:
 
-- new public APIs
-- protocol changes
-- package restructuring
-- breaking changes
-- runtime support
-- transport changes
-
----
-
-# Release Process
-
-The project follows:
-
-- Semantic Versioning
-- Conventional Commits
-- Keep a Changelog
-- Changesets
-- Automated Releases
-
-Current release:
-
-**v1.0.0-beta**
-
----
-
-# Continuous Integration
-
-Every Pull Request runs:
-
-- Install
-- Build
-- Type Check
-- Lint
-- Tests
-- Coverage
-- Bundle Analysis
-- Security Scans
-- Dependency Review
-- CodeQL
-
-Pull Requests must pass all required checks before merging.
+- New public APIs
+- New packages
+- Runtime changes
+- Protocol changes
+- Breaking changes
+- Architecture redesigns
 
 ---
 
 # Community
 
-Community participation is encouraged through:
+Join the community by:
 
-- GitHub Issues
-- GitHub Discussions
-- Pull Requests
-- Documentation
-- Example Applications
+- Opening Issues
+- Participating in Discussions
+- Improving Documentation
+- Creating Examples
+- Reviewing Pull Requests
 
-Be respectful and constructive.
+Constructive collaboration helps the ecosystem grow.
 
 ---
 
 # Recognition
 
-All contributors are recognised through GitHub's contributor graph and release acknowledgements.
+Contributors are recognised through:
+
+- GitHub Contributors
+- Release Notes
+- Project Credits
+- Community Showcases
 
 ---
 
 # License
 
-By contributing to this repository, you agree that your contributions are licensed under the Apache License 2.0.
+By contributing, you agree that your contributions are licensed under the **Apache License 2.0**.
 
-See LICENSE for details.
+See **LICENSE** for details.
 
 ---
 
 <div align="center">
 
-### Thank You
-
-Every contribution—whether code, documentation, testing, design or feedback—helps improve the PowerChain ecosystem.
+## Build the Future of Enterprise Blockchain
 
 **PowerChain Web3.js**
 
-Enterprise AI-Native Financial Infrastructure
+Official JavaScript & TypeScript SDK
 
-Version **v1.0.0-beta**
+**Version v1.0.0-beta**
+
+Enterprise AI-Native Financial Infrastructure
 
 </div>
