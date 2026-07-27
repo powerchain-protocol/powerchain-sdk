@@ -1,7 +1,7 @@
 <div align="center">
 
 <picture>
-  <img src="./assets/logo.svg" alt="PowerChain" width="120">
+  <img src="./assets/logo-green.png" alt="PowerChain" width="120">
 </picture>
 
 # @powerchain/web3.js
