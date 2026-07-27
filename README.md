@@ -1,14 +1,12 @@
 <div align="center">
 
-<picture>
-  <img src="./assets/logo-green.png" alt="PowerChain" width="120">
-</picture>
+<img src="./assets/logo-green.png" alt="PowerChain" width="120" />
 
 # @powerchain/web3.js
 
 ### Official JavaScript & TypeScript SDK for the PowerChain Network
 
-Build enterprise-grade blockchain applications, digital payments, treasury systems, AI-native financial infrastructure, renewable energy marketplaces, and digital asset platforms.
+Build enterprise-grade blockchain applications, digital payments, treasury systems, AI-native financial infrastructure, renewable energy marketplaces and digital asset platforms.
 
 [![Version](https://img.shields.io/badge/version-v1.0.0--beta-blue)](#)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green)](#)
@@ -25,15 +23,40 @@ Build enterprise-grade blockchain applications, digital payments, treasury syste
 
 # Enterprise AI-Native Renewable Energy & Financial Infrastructure
 
-PowerChain Web3.js is the official JavaScript and TypeScript SDK for the **PowerChain Network**, providing a comprehensive development platform for building secure, scalable and production-ready applications across digital finance, renewable energy and enterprise infrastructure.
+PowerChain Web3.js is the official JavaScript and TypeScript SDK for the **PowerChain Network**, providing a production-ready development platform for enterprise blockchain, programmable finance, renewable energy infrastructure and AI-native applications.
 
-Designed for developers, enterprises, utilities, financial institutions, governments and ecosystem partners, the SDK delivers a modular, strongly typed and extensible API for interacting with the PowerChain ecosystem. It unifies blockchain infrastructure, digital assets, programmable payments, treasury management, tokenised renewable energy, carbon markets, AI-native automation and enterprise services through a consistent developer experience.
+Designed for developers, enterprises, financial institutions, utilities, governments and ecosystem partners, the SDK delivers a modular, strongly typed and extensible API that unifies blockchain infrastructure, digital assets, programmable payments, treasury management, tokenised renewable energy, carbon markets, AI-powered automation and enterprise services through a consistent developer experience.
 
-Built with a modern, layered architecture, PowerChain Web3.js supports multiple JavaScript runtimes—including Node.js, browsers, serverless platforms and edge environments—while maintaining a stable, backwards-compatible public API. Every component is engineered for reliability, performance and long-term maintainability, enabling applications to scale from prototypes to enterprise deployments.
+Built using a modern layered architecture, PowerChain Web3.js supports **Node.js**, browsers, serverless platforms, edge runtimes and mobile applications while maintaining a stable, backwards-compatible public API. Tree-shakeable ES Modules, OpenAPI, GraphQL, JSON-RPC, OpenTelemetry, Semantic Versioning, signed package provenance and enterprise-grade tooling enable teams to build secure, observable and scalable applications from prototype to production.
 
-The SDK embraces modern software engineering and cloud-native best practices, including TypeScript-first development, Semantic Versioning (SemVer), OpenAPI, JSON-RPC, GraphQL, OpenTelemetry, automated testing, continuous integration, software supply-chain security, signed package provenance and comprehensive developer documentation. Its modular package architecture, tree-shakeable ES Modules and enterprise-grade tooling help teams build faster while maintaining security, observability and operational excellence.
+---
 
-Whether you are developing digital payment platforms, treasury systems, renewable energy marketplaces, carbon credit exchanges, tokenised asset platforms, AI-powered financial services or enterprise blockchain applications, PowerChain Web3.js provides the foundational SDK for building on the PowerChain Network with confidence.
+# Architecture Overview
+
+PowerChain Web3.js is organised into a layered architecture that cleanly separates application frameworks, SDK modules, middleware, transport protocols and blockchain infrastructure. This modular design enables excellent maintainability, extensibility and long-term compatibility across every supported runtime.
+
+<p align="center">
+  <img src="./assets/architecture.png" alt="PowerChain Web3.js Architecture" width="1100" />
+</p>
+
+<p align="center">
+  <sub>
+    PowerChain Web3.js layered architecture illustrating the application,
+    SDK, middleware, transport and blockchain infrastructure layers.
+  </sub>
+</p>
+
+## Architecture Layers
+
+| Layer | Components |
+| :---- | :--------- |
+| **Applications** | Next.js • React • Vue • Angular • Node.js • Mobile • Serverless |
+| **SDK Modules** | Wallet • Payments • Treasury • Exchange • Marketplace • AI • Energy • Governance |
+| **SDK Core** | Client • Middleware • Plugins • Authentication • Events • Caching |
+| **Transport** | REST • JSON-RPC • GraphQL • WebSocket • Streaming APIs |
+| **Infrastructure** | PowerChain Network • Solana • Helius • Jupiter • Pyth • Enterprise Services |
+
+For the complete technical architecture, see **[ARCHITECTURE.md](./ARCHITECTURE.md)**.
 
 ---
 
@@ -86,7 +109,6 @@ PowerChain combines enterprise cloud architecture with modern blockchain infrast
 - Energy Marketplace
 - Renewable Energy Certificates
 - Carbon Credits
-- IoT Devices
 
 ## Artificial Intelligence
 
@@ -103,7 +125,7 @@ PowerChain combines enterprise cloud architecture with modern blockchain infrast
 # Features
 
 | Category | Features |
-|----------|----------|
+| :------- | :------- |
 | Wallet | Wallets, Accounts, Signing, Recovery |
 | Blockchain | Transactions, Programs, Tokens, Metadata |
 | Payments | Checkout, Billing, Invoices, Settlement |
@@ -114,44 +136,6 @@ PowerChain combines enterprise cloud architecture with modern blockchain infrast
 | AI | Agents, Copilot, Risk, Analytics |
 | Enterprise | Identity, Audit, Policy Engine |
 | Developer | CLI, Playground, Examples |
-
----
-
-# Architecture Overview
-
-```
-Applications
-
- Next.js │ React │ Vue │ Angular │ Node.js │ Mobile
-
-                    │
-
-         @powerchain/web3.js SDK
-
-                    │
-
- Wallet │ Payments │ Treasury │ Exchange
-
- AI │ Energy │ Governance │ Analytics
-
-                    │
-
- Client │ Middleware │ Plugins │ Events
-
-                    │
-
- REST │ JSON-RPC │ GraphQL │ WebSocket
-
-                    │
-
-       PowerChain Network
-
-                    │
-
- Solana │ Helius │ Jupiter │ Pyth
-```
-
-For a detailed overview, see **ARCHITECTURE.md**.
 
 ---
 
@@ -179,7 +163,7 @@ yarn add @powerchain/web3.js
 
 # Quick Start
 
-```ts
+```typescript
 import { PowerChainClient } from "@powerchain/web3.js";
 
 const client = new PowerChainClient({
@@ -189,21 +173,13 @@ const client = new PowerChainClient({
 const wallet = await client.wallet.create();
 
 console.log(wallet.address);
-```
 
-Create a payment:
-
-```ts
 const payment = await client.payments.create({
   amount: 100,
   currency: "USDC",
   recipient: wallet.address,
 });
-```
 
-Get a swap quote:
-
-```ts
 const quote = await client.exchange.quote({
   inputMint: "...",
   outputMint: "...",
@@ -215,19 +191,19 @@ const quote = await client.exchange.quote({
 
 # Repository Structure
 
-```
+```text
 apps/
 packages/
 contracts/
 programs/
 registry/
-specifications/
-schemas/
 runtime/
 platform/
-developer/
+schemas/
+specifications/
 examples/
 templates/
+developer/
 docs/
 tests/
 benchmarks/
@@ -240,27 +216,27 @@ scripts/
 # Official Packages
 
 | Package | Description |
-|----------|-------------|
-| @powerchain/web3.js | Core SDK |
-| @powerchain/sdk | Enterprise SDK |
-| @powerchain/react | React Integration |
-| @powerchain/react-ui | React UI Components |
-| @powerchain/vue | Vue SDK |
-| @powerchain/angular | Angular SDK |
-| @powerchain/node | Node.js SDK |
-| @powerchain/python | Python SDK |
-| @powerchain/go | Go SDK |
-| @powerchain/rust | Rust SDK |
-| @powerchain/flutter | Flutter SDK |
-| @powerchain/cli | Developer CLI |
-| @powerchain/testing | Testing Utilities |
-| @powerchain/codegen | Code Generator |
+| :------ | :---------- |
+| `@powerchain/web3.js` | Core SDK |
+| `@powerchain/sdk` | Enterprise SDK |
+| `@powerchain/react` | React Integration |
+| `@powerchain/react-ui` | UI Component Library |
+| `@powerchain/vue` | Vue SDK |
+| `@powerchain/angular` | Angular SDK |
+| `@powerchain/node` | Node.js Runtime |
+| `@powerchain/python` | Python SDK |
+| `@powerchain/go` | Go SDK |
+| `@powerchain/rust` | Rust SDK |
+| `@powerchain/flutter` | Flutter SDK |
+| `@powerchain/cli` | Developer CLI |
+| `@powerchain/testing` | Testing Framework |
+| `@powerchain/codegen` | OpenAPI Code Generator |
 
 ---
 
 # Supported Platforms
 
-## Runtimes
+## JavaScript Runtimes
 
 - Node.js
 - Browser
@@ -277,40 +253,40 @@ scripts/
 - React
 - Vue
 - Angular
-- Svelte
 - Astro
 - Remix
 - Nuxt
+- Svelte
 
 ---
 
 # Performance Goals
 
 | Metric | Target |
-|---------|---------|
+| :----- | -----: |
 | SDK Initialisation | < 50 ms |
 | Wallet Creation | < 100 ms |
 | Transaction Build | < 20 ms |
 | Bundle Size | < 150 kB (gzip) |
 | Memory Usage | < 20 MB |
 
-Optimisations include:
+Optimised with:
 
 - Tree Shaking
 - Lazy Loading
 - HTTP Keep-Alive
-- Automatic Retry
 - Request Batching
-- Response Caching
+- Automatic Retry
 - Streaming APIs
-- OpenTelemetry Instrumentation
+- OpenTelemetry
+- Response Caching
 
 ---
 
 # Compatibility Matrix
 
-| Component | Supported |
-|------------|-----------|
+| Component | Version |
+| :-------- | :------ |
 | Node.js | 20 LTS+ |
 | TypeScript | 5.x |
 | pnpm | 10+ |
@@ -325,7 +301,7 @@ Optimisations include:
 
 # Security & Compliance
 
-PowerChain follows modern security best practices.
+PowerChain follows enterprise software engineering and cloud security best practices.
 
 ## Authentication
 
@@ -333,7 +309,7 @@ PowerChain follows modern security best practices.
 - OpenID Connect
 - JWT
 - API Keys
-- Passkeys (WebAuthn)
+- Passkeys
 - Service Accounts
 
 ## Authorisation
@@ -349,9 +325,9 @@ PowerChain follows modern security best practices.
 - SBOM Generation
 - Package Provenance
 - Signed Releases
-- Dependency Review
 - Secret Scanning
-- Third-Party Licence Audits
+- Dependency Review
+- Licence Auditing
 
 ## Compliance
 
@@ -365,58 +341,53 @@ PowerChain follows modern security best practices.
 
 # Example Applications
 
-Production-ready examples are available for:
-
-```
-examples/
-
-nextjs/
-react/
-react-native/
-vue/
-node/
-express/
-fastify/
-nestjs/
-electron/
-docker/
-kubernetes/
-```
-
-Examples include:
+Production-ready examples include:
 
 - Wallet Authentication
 - Payments
-- Token Swaps
 - Treasury Dashboard
-- AI Copilot
+- Token Swaps
+- AI Financial Copilot
 - Renewable Energy Marketplace
 - Governance Portal
+
+```text
+examples/
+├── nextjs/
+├── react/
+├── vue/
+├── react-native/
+├── node/
+├── express/
+├── fastify/
+├── nestjs/
+├── electron/
+├── docker/
+└── kubernetes/
+```
 
 ---
 
 # Documentation
 
-```
-Getting Started
-Architecture
-SDK Guide
-API Reference
-Wallet
-Payments
-Treasury
-Exchange
-Marketplace
-Energy
-AI Platform
-Governance
-Deployment
-Security
-Examples
-Tutorials
-Migration Guides
-Release Notes
-```
+- Getting Started
+- Architecture
+- SDK Guide
+- API Reference
+- Wallet
+- Payments
+- Treasury
+- Exchange
+- Marketplace
+- Energy
+- AI Platform
+- Governance
+- Security
+- Deployment
+- Tutorials
+- Examples
+- Migration Guides
+- Release Notes
 
 ---
 
@@ -438,26 +409,26 @@ pnpm typecheck
 
 # Roadmap
 
-Current release:
+## Current Release
 
-**v1.0.0-beta**
+- **v1.0.0-beta**
 
-Upcoming milestones:
+## Upcoming
 
 - Stable v1.0
 - Local Emulator
 - Developer Sandbox
 - Mobile SDKs
-- Enhanced AI Services
+- Enterprise Connectors
 - Additional Language SDKs
-- Expanded Enterprise Integrations
+- Expanded AI Services
 
 ---
 
 # Release Lifecycle
 
 | Stage | Status |
-|---------|--------|
+| :---- | :----- |
 | Alpha | Experimental |
 | **Beta** | Current |
 | Release Candidate | Planned |
@@ -469,23 +440,23 @@ PowerChain follows:
 - Semantic Versioning
 - Conventional Commits
 - Keep a Changelog
-- Automated Releases
-- Signed Git Tags
+- Signed Releases
+- Automated Publishing
 
 ---
 
 # Contributing
 
-Contributions are welcome.
+We welcome contributions from developers and ecosystem partners.
 
-Please read:
+Please review:
 
-- CONTRIBUTING.md
-- CODE_OF_CONDUCT.md
-- SECURITY.md
-- GOVERNANCE.md
+- `CONTRIBUTING.md`
+- `CODE_OF_CONDUCT.md`
+- `SECURITY.md`
+- `GOVERNANCE.md`
 
-before submitting issues or pull requests.
+before opening issues or pull requests.
 
 ---
 
@@ -493,9 +464,9 @@ before submitting issues or pull requests.
 
 - GitHub Discussions
 - GitHub Issues
-- Release Notes
-- Roadmap
 - Changelog
+- Roadmap
+- Release Notes
 
 ---
 
@@ -503,8 +474,8 @@ before submitting issues or pull requests.
 
 - Documentation
 - API Reference
-- Examples
 - Tutorials
+- Examples
 - Enterprise Support
 
 ---
@@ -513,7 +484,7 @@ before submitting issues or pull requests.
 
 Licensed under the **Apache License 2.0**.
 
-See the **LICENSE** file for details.
+See **LICENSE** for details.
 
 ---
 
@@ -521,12 +492,12 @@ See the **LICENSE** file for details.
 
 ## PowerChain Network
 
-**Enterprise AI-Native Financial Infrastructure**
+### Enterprise AI-Native Renewable Energy & Financial Infrastructure
 
 **@powerchain/web3.js**
 
-**Version v1.0.0-beta**
+Version **v1.0.0-beta**
 
-Built for developers, enterprises and the future of digital infrastructure.
+Built for developers, enterprises and the future of programmable digital infrastructure.
 
 </div>
