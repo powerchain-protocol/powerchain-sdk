@@ -1,530 +1,631 @@
-# Governance
+# Governancen (DAO)
 
-> Governance Framework for **@powerchain/web3.js**
+ Governance Framework for **@powerchain/web3.js**
+
 **Version:** `v1.0.0-beta`
-PowerChain Web3.js governance defines the processes, responsibilities and standards used to maintain the SDK, manage ecosystem contributions, evolve technical architecture and ensure transparent decision-making.
-The governance model is designed to support:
+
+PowerChain Web3.js follows an open, transparent and engineering-driven governance model that defines how the SDK is maintained, how technical decisions are made and how the ecosystem evolves over time.
+
+The governance framework promotes collaboration while ensuring enterprise-grade quality, security and long-term sustainability across the PowerChain ecosystem.
+
+## Objectives
+
 - Open-source collaboration
 - Enterprise reliability
 - Technical excellence
 - Security-first development
-- Long-term ecosystem growth
-- Transparent software evolution
+- Long-term ecosystem sustainability
+- Transparent decision-making
+- Stable public APIs
+- Community participation
+
 ---
+
 # Table of Contents
+
 - Governance Principles
-- Governance Model
+- Governance Structure
+- Governance Diagram
 - Roles & Responsibilities
-- Maintainers
 - Core Team
-- Contributors
 - Technical Steering Committee
+- Maintainers
+- Contributors
+- Working Groups
 - Architecture Governance
 - Proposal Process
-- Enhancement Proposals
-- Decision Making
+- PowerChain Enhancement Proposals (PEPs)
+- Decision-Making Process
 - Release Governance
 - Security Governance
 - Code Governance
 - Dependency Governance
+- Documentation Governance
 - Community Governance
 - Contribution Workflow
 - Code Review Standards
-- Breaking Changes
+- Breaking Change Policy
 - Versioning Policy
-- Documentation Governance
 - Incident Management
 - Transparency
 - Future Governance
+
 ---
+
 # Governance Principles
-PowerChain follows these principles:
+
+PowerChain governance is guided by the following principles.
+
 ## Transparency
-Technical decisions, changes and roadmap discussions should be documented and accessible.
+
+Technical decisions, release plans, architecture discussions and roadmap changes should be publicly documented whenever possible.
+
 ## Merit-Based Contribution
-Contributors are recognised based on technical quality, collaboration and ecosystem impact.
+
+Responsibilities are earned through consistent, high-quality contributions, technical expertise and community participation.
+
 ## Security First
-Security considerations are prioritised throughout development.
+
+Security is integrated into every stage of development, review and release.
+
 ## Stability
-Public APIs should remain predictable and backwards compatible.
+
+Public APIs should remain stable and predictable, with breaking changes minimised and clearly communicated.
+
 ## Open Collaboration
-Developers, enterprises and ecosystem partners can participate in improving the platform.
+
+Developers, enterprises, researchers and ecosystem partners are encouraged to participate in improving the platform.
+
 ## Long-Term Sustainability
-Architecture and decisions should support future growth.
+
+Technical decisions should favour maintainability, interoperability and long-term ecosystem health.
+
 ---
-# Governance Model
-PowerChain Web3.js uses a layered governance structure:
+
+# Governance Structure
+
+PowerChain Web3.js uses a layered governance model.
+
 ```text
-┌───────────────────────────────────────┐
-│          PowerChain Ecosystem          │
-│ Developers • Users • Partners          │
-└───────────────────────────────────────┘
-                  │
-                  ▼
-┌───────────────────────────────────────┐
-│        Community Contributors          │
-│ Issues • Discussions • Pull Requests   │
-└───────────────────────────────────────┘
-                  │
-                  ▼
-┌───────────────────────────────────────┐
-│            Maintainers                 │
-│ Reviews • Releases • Quality Control   │
-└───────────────────────────────────────┘
-                  │
-                  ▼
-┌───────────────────────────────────────┐
-│     Technical Steering Committee       │
-│ Architecture • Standards • Roadmap     │
-└───────────────────────────────────────┘
-                  │
-                  ▼
-┌───────────────────────────────────────┐
-│          PowerChain Core Team          │
-│ Strategic Direction & Platform Vision  │
-└───────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│                 PowerChain Ecosystem                    │
+│ Developers • Users • Enterprises • Partners            │
+└─────────────────────────────────────────────────────────┘
+                           │
+                           ▼
+┌─────────────────────────────────────────────────────────┐
+│              Community Contributors                     │
+│ Issues • Discussions • Pull Requests • Documentation    │
+└─────────────────────────────────────────────────────────┘
+                           │
+                           ▼
+┌─────────────────────────────────────────────────────────┐
+│                    Maintainers                          │
+│ Reviews • Quality • Releases • Documentation           │
+└─────────────────────────────────────────────────────────┘
+                           │
+                           ▼
+┌─────────────────────────────────────────────────────────┐
+│            Technical Steering Committee                 │
+│ Architecture • Standards • API • Roadmap               │
+└─────────────────────────────────────────────────────────┘
+                           │
+                           ▼
+┌─────────────────────────────────────────────────────────┐
+│                PowerChain Core Team                     │
+│ Strategy • Governance • Platform Vision                │
+└─────────────────────────────────────────────────────────┘
+````
 
-⸻
+---
 
-Roles & Responsibilities
+# Roles & Responsibilities
 
-Core Team
+## PowerChain Core Team
 
-The Core Team is responsible for:
+The Core Team provides long-term strategic leadership for the project.
 
-* Platform direction
-* Major architectural decisions
-* Ecosystem strategy
-* Security standards
+Responsibilities include:
+
+* Platform vision
+* Strategic planning
+* Major architectural direction
+* Security policies
+* Governance framework
 * Release approval
+* Ecosystem partnerships
 * Long-term roadmap
 
-⸻
+---
 
-Maintainers
+## Technical Steering Committee (TSC)
 
-Maintainers manage day-to-day project operations.
+The Technical Steering Committee oversees the technical direction of the SDK.
 
-Responsibilities:
+Responsibilities include:
 
-* Review pull requests
-* Maintain packages
-* Approve releases
-* Manage issues
-* Review security reports
-* Maintain documentation
-
-Maintainers must:
-
-* Follow contribution standards
-* Provide constructive feedback
-* Preserve project quality
-
-⸻
-
-Contributors
-
-Contributors include:
-
-* Developers
-* Documentation authors
-* Security researchers
-* Community members
-* Ecosystem partners
-
-Contributors can:
-
-* Submit improvements
-* Report bugs
-* Propose features
-* Improve documentation
-* Create integrations
-
-⸻
-
-Technical Steering Committee
-
-The Technical Steering Committee (TSC) oversees technical direction.
-
-Responsibilities:
-
-* Architecture decisions
-* SDK evolution
-* API standards
+* Architecture reviews
+* API governance
+* Package standards
 * Compatibility strategy
 * Major feature approval
+* Performance standards
 * Technical roadmap
 
 The TSC reviews:
 
-* Architecture proposals
+* Architecture Decision Records (ADRs)
+* PowerChain Enhancement Proposals (PEPs)
 * Breaking changes
 * New packages
+* Runtime support
 * Protocol integrations
 
-⸻
+---
 
-Architecture Governance
+## Maintainers
 
-Architecture decisions are documented through Architecture Decision Records (ADRs).
+Maintainers are responsible for the day-to-day operation of the repository.
+
+Responsibilities include:
+
+* Reviewing pull requests
+* Managing releases
+* Maintaining packages
+* Triaging issues
+* Reviewing documentation
+* Monitoring CI/CD
+* Responding to security reports
+
+Maintainers are expected to:
+
+* Follow project standards
+* Provide constructive reviews
+* Ensure code quality
+* Preserve API stability
+* Mentor contributors
+
+---
+
+## Contributors
+
+Contributors include:
+
+* Software developers
+* Documentation authors
+* Security researchers
+* Designers
+* Community members
+* Enterprise partners
+
+Contributors may:
+
+* Submit pull requests
+* Report bugs
+* Suggest improvements
+* Improve documentation
+* Build integrations
+* Participate in discussions
+
+---
+
+## Working Groups
+
+Specialised working groups may be established for specific technical domains.
 
 Examples:
 
+* SDK Working Group
+* Wallet Working Group
+* AI Platform Working Group
+* Renewable Energy Working Group
+* Security Working Group
+* Documentation Working Group
+
+---
+
+# Architecture Governance
+
+Architecture decisions are documented using **Architecture Decision Records (ADRs)**.
+
+Typical ADR topics include:
+
 * API design
-* Runtime changes
+* Runtime architecture
 * Transport protocols
 * Dependency selection
 * Security improvements
 * Performance optimisation
+* Repository organisation
 
-Architecture changes should consider:
+Every architectural decision should consider:
 
 * Backwards compatibility
-* Developer impact
+* Developer experience
 * Security implications
-* Maintenance cost
 * Performance impact
+* Operational complexity
+* Long-term maintenance
 
-⸻
+---
 
-Proposal Process
+# Proposal Process
 
-Significant changes should begin with a proposal.
+Significant changes begin with a written proposal.
 
-A proposal should include:
+Each proposal should include:
 
-Title
-Problem Statement
-Motivation
-Proposed Solution
-Technical Design
-Security Considerations
-Performance Impact
-Migration Plan
-Alternatives Considered
+* Title
+* Problem Statement
+* Motivation
+* Proposed Solution
+* Technical Design
+* Security Considerations
+* Performance Impact
+* Migration Plan
+* Alternatives Considered
 
-⸻
+---
 
-PowerChain Enhancement Proposals (PEPs)
+# PowerChain Enhancement Proposals (PEPs)
 
-Major SDK changes may use PowerChain Enhancement Proposals.
+Major architectural and ecosystem changes may follow the PowerChain Enhancement Proposal process.
 
-Examples:
+Typical PEP topics include:
 
 * New SDK modules
-* API changes
-* New blockchain integrations
-* New runtime features
+* Public API changes
+* Runtime improvements
+* Blockchain integrations
 * Enterprise capabilities
+* Governance updates
 
 Proposal lifecycle:
 
+```text
 Draft
-↓
+   │
 Discussion
-↓
-Review
-↓
+   │
+Technical Review
+   │
 Approval
-↓
+   │
 Implementation
-↓
+   │
+Documentation
+   │
 Release
+```
 
-⸻
+---
 
-Decision Making
+# Decision-Making Process
 
-Technical decisions are based on:
+Technical decisions are evaluated using objective engineering criteria.
+
+Evaluation factors include:
 
 * Technical merit
-* Security impact
+* Security
 * Developer experience
-* Ecosystem value
-* Maintainability
 * Performance
+* Maintainability
+* Ecosystem value
+* Standards compliance
 
-Decisions should favour:
+Decision priorities:
 
-* Simplicity
-* Stability
-* Compatibility
-* Open standards
+1. Security
+2. Stability
+3. Simplicity
+4. Compatibility
+5. Performance
+6. Extensibility
 
-⸻
+---
 
-Release Governance
+# Release Governance
 
-PowerChain follows:
+Every release follows a documented quality process.
 
-* Semantic Versioning
-* Automated testing
-* Release reviews
-* Signed releases
-* Changelog management
-
-Release process:
-
+```text
 Development
-↓
+      │
 Code Review
-↓
-Automated Tests
-↓
-Security Checks
-↓
+      │
+Automated Testing
+      │
+Security Validation
+      │
 Release Candidate
-↓
+      │
 Production Release
+```
 
-⸻
+Release requirements:
 
-Release Lifecycle
+* CI passing
+* Test coverage maintained
+* Documentation updated
+* Changelog completed
+* Security review completed
+* Version verified
 
-Stage	Purpose
-Alpha	Experimental development
-Beta	Public testing
-Release Candidate	Stability validation
-Stable	Production release
-LTS	Long-term maintenance
+---
 
-Current version:
+# Release Lifecycle
 
-v1.0.0-beta
+| Stage             | Purpose                     |
+| ----------------- | --------------------------- |
+| Alpha             | Experimental development    |
+| Beta              | Public testing and feedback |
+| Release Candidate | Stability validation        |
+| Stable            | General Availability        |
+| LTS               | Long-term maintenance       |
 
-⸻
+**Current Version**
 
-Security Governance
+`v1.0.0-beta`
 
-Security is managed through responsible disclosure.
+---
 
-Security practices include:
+# Security Governance
 
-* Private vulnerability reporting
-* Security reviews
-* Dependency scanning
+Security follows responsible disclosure and secure development practices.
+
+Security controls include:
+
 * CodeQL analysis
-* Supply chain verification
-* Signed packages
+* Dependency scanning
+* Secret scanning
+* Software Bill of Materials (SBOM)
+* Package provenance
+* Signed releases
+* Static analysis
+* Security reviews
 
 Security reports should include:
 
 * Description
-* Impact assessment
+* Severity
 * Reproduction steps
+* Impact
 * Suggested mitigation
 
-⸻
+---
 
-Code Governance
+# Code Governance
 
-All code changes must:
+All contributions must:
 
-* Pass automated tests
-* Follow style standards
-* Include documentation where required
+* Pass automated testing
+* Pass linting
 * Pass type checking
-* Pass security checks
+* Pass security scanning
+* Include documentation where appropriate
+* Follow coding standards
 
 Required checks:
 
+```bash
 pnpm lint
+
 pnpm test
+
 pnpm typecheck
+
 pnpm build
+```
 
-⸻
+---
 
-Dependency Governance
+# Dependency Governance
 
-Dependencies are reviewed for:
+Dependencies are evaluated against:
 
-* Security vulnerabilities
+* Security
 * Licence compatibility
-* Maintenance status
-* Performance impact
-* Bundle size impact
+* Community adoption
+* Maintenance activity
+* Bundle size
+* Performance
+* Long-term viability
 
-Preferred dependencies:
+Preferred dependencies are:
 
-* Actively maintained
 * Open source
-* Well documented
+* Well maintained
 * Secure
+* Well documented
+* Widely adopted
 
-⸻
+---
 
-Community Governance
+# Documentation Governance
 
-Community participation happens through:
+Documentation should be:
+
+* Accurate
+* Versioned
+* Discoverable
+* Developer-focused
+* Continuously maintained
+
+Documentation includes:
+
+* README
+* Architecture
+* API Reference
+* Tutorials
+* Examples
+* Migration Guides
+* Release Notes
+
+---
+
+# Community Governance
+
+Community participation occurs through:
 
 * GitHub Issues
 * GitHub Discussions
 * Pull Requests
-* Documentation contributions
-* Developer feedback
+* RFCs
+* Documentation
+* Example applications
 
-Community members should:
+Community members are expected to:
 
-* Be respectful
-* Provide constructive feedback
 * Follow the Code of Conduct
+* Communicate respectfully
+* Provide constructive feedback
+* Support new contributors
 
-⸻
+---
 
-Contribution Workflow
+# Contribution Workflow
 
-Standard workflow:
-
+```text
 Fork Repository
-↓
-Create Branch
-↓
-Implement Change
-↓
+      │
+Create Feature Branch
+      │
+Implement Changes
+      │
 Add Tests
-↓
+      │
+Update Documentation
+      │
 Submit Pull Request
-↓
+      │
 Code Review
-↓
+      │
 Merge
-↓
+      │
 Release
+```
 
-⸻
+---
 
-Code Review Standards
+# Code Review Standards
 
-Reviews evaluate:
+Every review considers:
 
-Correctness
+* Correctness
+* Readability
+* Security
+* Performance
+* Maintainability
+* Test coverage
+* Documentation
+* API consistency
 
-Does the implementation work?
+---
 
-Security
-
-Does it introduce vulnerabilities?
-
-Performance
-
-Does it affect efficiency?
-
-Maintainability
-
-Is the code understandable?
-
-Compatibility
-
-Does it preserve existing behaviour?
-
-⸻
-
-Breaking Changes
+# Breaking Change Policy
 
 Breaking changes require:
 
 * Technical justification
 * Migration documentation
-* Deprecation period
+* Deprecation notice where practical
 * Maintainer approval
+* TSC review for significant API changes
 
-Breaking changes are reserved for major versions.
+Breaking changes are normally introduced only in major releases.
 
 Example:
 
-v1.x.x → v2.0.0
+```text
+v1.x.x
+   │
+   ▼
+v2.0.0
+```
 
-⸻
+---
 
-Versioning Policy
+# Versioning Policy
 
-PowerChain follows Semantic Versioning:
+PowerChain follows **Semantic Versioning (SemVer)**.
 
+```text
 MAJOR.MINOR.PATCH
+```
 
 Example:
 
+```text
 1.0.0
+```
 
-Meaning:
+Version meanings:
 
-* Major: Breaking changes
-* Minor: New features
-* Patch: Bug fixes
+* **Major** — Breaking changes
+* **Minor** — New backwards-compatible features
+* **Patch** — Bug fixes and security updates
 
-⸻
+---
 
-Documentation Governance
+# Incident Management
 
-Documentation must remain:
+Operational incidents follow a structured response process.
 
-* Accurate
-* Current
-* Version aligned
-* Developer focused
-
-Documentation includes:
-
-* API Reference
-* Tutorials
-* Architecture Guides
-* Examples
-* Migration Guides
-
-⸻
-
-Incident Management
-
-Operational incidents follow:
-
+```text
 Detection
-↓
+     │
 Assessment
-↓
+     │
 Mitigation
-↓
+     │
 Resolution
-↓
+     │
 Post-Incident Review
+```
 
-Post-incident reviews document:
+Post-incident reports document:
 
 * Root cause
+* Timeline
 * Impact
 * Resolution
-* Prevention steps
+* Preventative actions
 
-⸻
+---
 
-Transparency
+# Transparency
 
-Governance information should include:
+The following information should be publicly available whenever appropriate:
 
 * Release notes
 * Changelog
 * Roadmap updates
-* Security announcements
-* Architecture decisions
+* Architecture Decision Records
+* Security advisories
+* Governance changes
 
-⸻
+---
 
-Future Governance
+# Future Governance
 
-Future improvements may include:
+Planned governance enhancements include:
 
-* Community advisory boards
-* Developer councils
-* Ecosystem voting mechanisms
-* Public roadmap governance
-* Expanded partner participation
+* Community Advisory Board
+* Public Technical Roadmap
+* Ecosystem Working Groups
+* Partner Advisory Council
+* Expanded contributor recognition
+* Improved governance automation
 
-⸻
+---
 
-Version
+# Version
 
-PowerChain Web3.js
+**PowerChain Web3.js**
 
-Governance Version: v1.0.0-beta
+**Governance Framework:** `v1.0.0-beta`
 
 Enterprise AI-Native Renewable Energy & Financial Infrastructure.
+
+```
